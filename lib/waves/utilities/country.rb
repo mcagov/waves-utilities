@@ -2,11 +2,11 @@ module WavesUtilities
   class Country
     def self.all
       [
-        ['GB', 'United Kingdom'],
-        ['FR', 'France'],
-        ['ES', 'Spain'],
-        ['PT', 'Portugal'],
-        ['VG', 'British Virgin Islands'],
+        ['United Kingdom', 'GB'],
+        ['France', 'FR'],
+        ['Spain', 'ES'],
+        ['Portugal', 'PT'],
+        ['British Virgin Islands', 'VG'],
       ]
     end
   end
