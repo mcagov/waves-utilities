@@ -6,7 +6,7 @@ RSpec.describe WavesUtilities::Country do
     subject { described_class.all }
 
     it "lists the countries" do
-      expect(subject.first).to eq(["UNITED KINGDOM", "GB"])
+      expect(subject.first).to eq("AFGHANISTAN")
     end
   end
 end
