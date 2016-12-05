@@ -1,5 +1,8 @@
 require "waves/utilities/country"
+require "waves/utilities/delivery_address"
 require "waves/utilities/nationality"
+require "waves/utilities/owner"
 require "waves/utilities/task"
 require "waves/utilities/version"
+require "waves/utilities/vessel"
 require "waves/utilities/vessel_type"
