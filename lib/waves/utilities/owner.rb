@@ -1,11 +1,13 @@
 module WavesUtilities
   class Owner
     attr_accessor(
+      :id,
       :name,
       :address_1,
       :address_2,
       :address_3,
       :town,
+      :county,
       :postcode,
       :country,
       :nationality,
