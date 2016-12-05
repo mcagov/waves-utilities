@@ -88,6 +88,15 @@ module WavesUtilities
         all_task_types.delete_if { |t| t[1] == :unknown }
       end
 
+      def govuk_task_types
+        [
+          :new_registration, :renewal, :re_registration, :change_owner,
+          :change_vessel, :change_address, :duplicate_certificate,
+          :change_address, :current_transcript, :historic_transcript,
+          :closure
+        ]
+      end
+
       def validation_helper_task_type_list
         default_task_types.map { |t| t[1].to_s }
       end
