@@ -1,5 +1,4 @@
 require "spec_helper"
-require "waves/utilities/customer"
 
 describe WavesUtilities::Customer do
   context "#new" do

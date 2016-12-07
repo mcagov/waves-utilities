@@ -1,5 +1,4 @@
 require "spec_helper"
-require "waves/utilities/country"
 
 RSpec.describe WavesUtilities::Country do
   context ".all" do

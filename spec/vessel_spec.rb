@@ -1,5 +1,4 @@
 require "spec_helper"
-require "waves/utilities/vessel"
 
 describe WavesUtilities::Vessel do
   context "in general" do

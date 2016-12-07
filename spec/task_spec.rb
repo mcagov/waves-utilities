@@ -1,5 +1,4 @@
 require "spec_helper"
-require "waves/utilities/task"
 
 describe WavesUtilities::Task do
   let(:task) { described_class.new(key) }

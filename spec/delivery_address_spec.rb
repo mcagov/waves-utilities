@@ -1,5 +1,4 @@
 require "spec_helper"
-require "waves/utilities/delivery_address"
 
 describe WavesUtilities::DeliveryAddress do
   context "#new" do

@@ -1,5 +1,4 @@
 require "spec_helper"
-require "waves/utilities/vessel_type"
 
 RSpec.describe WavesUtilities::VesselType do
   context ".all" do
