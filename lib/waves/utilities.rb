@@ -1,4 +1,5 @@
 require "waves/utilities/country"
+require "waves/utilities/customer"
 require "waves/utilities/delivery_address"
 require "waves/utilities/nationality"
 require "waves/utilities/owner"
