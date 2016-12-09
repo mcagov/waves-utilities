@@ -53,7 +53,8 @@ module WavesUtilities
     def builds_registry?
       [
         :change_owner, :change_vessel, :change_address,
-        :re_registration, :new_registration, :renewal].include?(@key)
+        :re_registration, :new_registration, :renewal,
+        :manual_override].include?(@key)
     end
 
     def builds_registration?
@@ -117,6 +118,7 @@ module WavesUtilities
           ["General Enquiry", :enquiry],
           ["Registrar Closure", :registrar_closure],
           ["Registrar Restores Closure", :registrar_restores_closure],
+          ["Manual Override", :manual_override],
           ["Unknown", :unknown]]
       end
     end
