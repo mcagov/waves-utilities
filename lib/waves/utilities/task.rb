@@ -93,8 +93,7 @@ module WavesUtilities
         [
           :new_registration, :renewal, :re_registration, :change_owner,
           :change_vessel, :change_address, :duplicate_certificate,
-          :change_address, :current_transcript, :historic_transcript,
-          :closure
+          :current_transcript, :historic_transcript, :closure
         ]
       end
 
