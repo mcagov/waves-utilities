@@ -13,7 +13,8 @@ module WavesUtilities
       :nationality,
       :email,
       :phone_number,
-      :declared_at
+      :declared_at,
+      :registered_customer_id
     )
 
     def initialize(params = {})
