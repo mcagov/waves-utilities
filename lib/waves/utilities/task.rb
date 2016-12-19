@@ -21,6 +21,16 @@ module WavesUtilities
       [:renewal, :change_owner].include?(@key)
     end
 
+    def ownership_can_be_changed?
+      [
+        :new_registration, :change_owner, :renewal, :re_registration
+      ].include?(@key)
+    end
+
+    def address_can_be_changed?
+      ownership_can_be_changed? || @key == :change_address
+    end
+
     def payment_required?
       ![:change_address, :closure, :enquiry].include?(@key)
     end

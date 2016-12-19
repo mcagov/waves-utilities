@@ -60,6 +60,54 @@ describe WavesUtilities::Task do
     end
   end
 
+  context "#ownership_can_be_changed?" do
+    subject { task.ownership_can_be_changed? }
+
+    context "for a new_registration" do
+      let(:key) { :new_registration }
+      it { expect(subject).to be_truthy }
+    end
+
+    context "for a re_registration" do
+      let(:key) { :re_registration }
+      it { expect(subject).to be_truthy }
+    end
+
+    context "for a renewal" do
+      let(:key) { :renewal }
+      it { expect(subject).to be_truthy }
+    end
+
+    context "for a change_owner" do
+      let(:key) { :change_owner }
+      it { expect(subject).to be_truthy }
+    end
+
+    context "for a change_vessel" do
+      let(:key) { :change_vessel }
+      it { expect(subject).to be_falsey }
+    end
+  end
+
+  context "#address_can_be_changed?" do
+    subject { task.address_can_be_changed? }
+
+    context "for a change_owner" do
+      let(:key) { :change_owner }
+      it { expect(subject).to be_truthy }
+    end
+
+    context "for a change_address" do
+      let(:key) { :change_address }
+      it { expect(subject).to be_truthy }
+    end
+
+    context "for a change_vessel" do
+      let(:key) { :change_vessel }
+      it { expect(subject).to be_falsey }
+    end
+  end
+
   context "#payment_required?" do
     subject { task.payment_required? }
 
