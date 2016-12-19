@@ -31,6 +31,12 @@ module WavesUtilities
       ownership_can_be_changed? || @key == :change_address
     end
 
+    def vessel_can_be_edited?
+      [
+        :new_registration, :change_vessel, :renewal, :re_registration
+      ].include?(@key)
+    end
+
     def payment_required?
       ![:change_address, :closure, :enquiry].include?(@key)
     end
