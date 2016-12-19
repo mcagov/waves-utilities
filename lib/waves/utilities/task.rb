@@ -12,6 +12,15 @@ module WavesUtilities
       Task.all_task_types.find { |t| t[1] == @key }[0]
     end
 
+    def declarations_required_on_create?
+      [:new_registration, :re_registration].include?(@key)
+    end
+
+    def declarations_required_on_add_owner?
+      return true if declarations_required_on_create?
+      [:renewal, :change_owner].include?(@key)
+    end
+
     def payment_required?
       ![:change_address, :closure, :enquiry].include?(@key)
     end
