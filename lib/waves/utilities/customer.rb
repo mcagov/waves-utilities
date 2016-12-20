@@ -36,8 +36,8 @@ module WavesUtilities
         address_2,
         address_3,
         town,
-        country,
         postcode,
+        country,
       ].compact.reject(&:empty?).join(", ")
     end
   end
