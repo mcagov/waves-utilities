@@ -60,6 +60,24 @@ describe WavesUtilities::Task do
     end
   end
 
+  context "electronic_delivery_available?" do
+    subject { task.electronic_delivery_available? }
+
+    context "for a new_registration" do
+      let(:key) { :new_registration }
+      it { expect(subject).to be_falsey }
+    end
+
+    context "for a current_transcript" do
+      let(:key) { :current_transcript }
+      it { expect(subject).to be_truthy }
+    end
+
+    context "for a historic_transcript" do
+      let(:key) { :historic_transcript }
+      it { expect(subject).to be_truthy }
+    end
+  end
   context "#ownership_can_be_changed?" do
     subject { task.ownership_can_be_changed? }
 

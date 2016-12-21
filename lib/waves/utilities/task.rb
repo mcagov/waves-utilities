@@ -21,6 +21,10 @@ module WavesUtilities
       [:renewal, :change_owner].include?(@key)
     end
 
+    def electronic_delivery_available?
+      [:current_transcript, :historic_transcript].include?(@key)
+    end
+
     def ownership_can_be_changed?
       [
         :new_registration, :change_owner, :renewal, :re_registration
