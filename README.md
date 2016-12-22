@@ -2,7 +2,7 @@
 
 To add to a project:
 
-`gem "waves-utilities", git: "https://github.com/tobyprivett/waves-utilities.git"`
+`gem "waves-utilities", git: "https://github.com/oceanshq/waves-utilities.git"`
 
 To open a command prompt:
 
