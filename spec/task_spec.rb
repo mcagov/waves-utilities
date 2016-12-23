@@ -105,6 +105,11 @@ describe WavesUtilities::Task do
       let(:key) { :change_vessel }
       it { expect(subject).to be_falsey }
     end
+
+    context "for a manual_override" do
+      let(:key) { :manual_override }
+      it { expect(subject).to be_truthy }
+    end
   end
 
   context "#address_can_be_changed?" do
@@ -151,6 +156,11 @@ describe WavesUtilities::Task do
 
     context "for a change_vessel" do
       let(:key) { :change_vessel }
+      it { expect(subject).to be_truthy }
+    end
+
+    context "for a manual_override" do
+      let(:key) { :manual_override }
       it { expect(subject).to be_truthy }
     end
   end

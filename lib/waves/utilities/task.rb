@@ -27,7 +27,8 @@ module WavesUtilities
 
     def ownership_can_be_changed?
       [
-        :new_registration, :change_owner, :renewal, :re_registration
+        :new_registration, :change_owner, :renewal, :re_registration,
+        :manual_override
       ].include?(@key)
     end
 
@@ -37,7 +38,8 @@ module WavesUtilities
 
     def vessel_can_be_edited?
       [
-        :new_registration, :change_vessel, :renewal, :re_registration
+        :new_registration, :change_vessel, :renewal, :re_registration,
+        :manual_override
       ].include?(@key)
     end
 
