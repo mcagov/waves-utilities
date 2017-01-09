@@ -22,6 +22,13 @@ returns a list as:
 returns a list as:
 `["UNITED KINGDOM"]`
 
+#### Port Names and Numberss
+
+`WavesUtilities::Ports.all`
+
+returns a list as:
+`["SOUTHAMPTION", "SU"]`
+
 
 #### Vessel Types
 
