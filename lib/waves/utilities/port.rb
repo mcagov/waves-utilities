@@ -1,8 +1,8 @@
 class WavesUtilities::Port
 
   class << self
-    def all
-      part_2.map{ |port| [port[1], port[0]]}
+    def all(port = :part_2)
+      part_2.map{ |port| [port[1], port[0]]} if port.to_sym == :part_2
     end
 
 
