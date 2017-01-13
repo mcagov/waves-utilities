@@ -50,4 +50,8 @@ describe WavesUtilities::Vessel do
       expect(vessel.name).to eq("Bob")
     end
   end
+
+  context "::ATTRIBUTES" do
+    it { expect(WavesUtilities::Vessel::ATTRIBUTES).to include(:name) }
+  end
 end

@@ -1,6 +1,7 @@
 module WavesUtilities
   class Vessel
-    attr_accessor(
+
+    ATTRIBUTES = [
       :name,
       :hin,
       :make_and_model,
@@ -12,8 +13,46 @@ module WavesUtilities
       :alt_name_2,
       :alt_name_3,
       :vessel_type,
-      :vessel_type_other
-    )
+      :vessel_type_other,
+
+      # added to support part_2 #Identity section
+      :registration_type,
+      :vessel_category,
+      :imo_number,
+      :port_code,
+      :port_no,
+      :ec_number,
+      :last_registry_country,
+      :last_registry_no,
+      :last_registry_port,
+
+      # added to support part_2 #Operational Information section
+      :classification_society,
+      :classification_society_other,
+      :entry_into_service_at,
+      :area_of_operation,
+      :alternative_activity,
+
+      # added to support part_2 #Description section
+      :gross_tonnage,
+      :net_tonnage,
+      :register_tonnage,
+      :register_length,
+      :length_overall,
+      :breadth,
+      :depth,
+      :propulsion_system,
+
+      # added to support part_2 #Construction section
+      :name_of_builder,
+      :builders_address,
+      :place_of_build,
+      :keel_laying_date,
+      :hull_construction_material,
+      :yard_number
+    ]
+
+    attr_accessor(*ATTRIBUTES)
 
     def initialize(params = {})
       params.reject! { |param| !respond_to?(param) }
