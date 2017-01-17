@@ -14,7 +14,9 @@ module WavesUtilities
       :email,
       :phone_number,
       :declared_at,
-      :registered_customer_id
+      :registered_customer_id,
+      :imo_number,
+      :eligibility_status
     )
 
     def initialize(params = {})
