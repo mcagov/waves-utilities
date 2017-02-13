@@ -20,7 +20,8 @@ module WavesUtilities
       :date_of_incorporation,
       :registration_number,
       :managing_owner,
-      :correspondent
+      :correspondent,
+      :shares_held
     )
 
     def initialize(params = {})
