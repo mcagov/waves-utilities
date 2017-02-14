@@ -1,4 +1,13 @@
 class WavesUtilities::Port
+  def initialize(code)
+    @code = code
+  end
+
+  def name
+    port = WavesUtilities::Port.all.find { |port| port[1] == @code }
+    port ? port[0].gsub("\u2028", "") : ""
+  end
+
   class << self
     def all(part = :part_2)
       part_2.map{ |port| [port[1], port[0]]} if part.to_sym == :part_2
