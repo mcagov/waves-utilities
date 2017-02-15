@@ -30,6 +30,11 @@ describe WavesUtilities::Task do
       it { expect(subject).to be_truthy }
     end
 
+   context "for a renewal" do
+     let(:key) { :renewal }
+     it { expect(subject).to be_truthy }
+   end
+
     context "for a closure" do
       let(:key) { :closure}
       it { expect(subject).to be_falsey }
@@ -41,11 +46,6 @@ describe WavesUtilities::Task do
 
     context "for a re_registration" do
       let(:key) { :re_registration }
-      it { expect(subject).to be_truthy }
-    end
-
-    context "for a renewal" do
-      let(:key) { :renewal }
       it { expect(subject).to be_truthy }
     end
 
