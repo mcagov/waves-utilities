@@ -13,12 +13,12 @@ module WavesUtilities
     end
 
     def declarations_required_on_create?
-      [:new_registration, :re_registration].include?(@key)
+      [:new_registration, :re_registration, :renewal].include?(@key)
     end
 
     def declarations_required_on_add_owner?
       return true if declarations_required_on_create?
-      [:renewal, :change_owner].include?(@key)
+      [:change_owner].include?(@key)
     end
 
     def electronic_delivery_available?
