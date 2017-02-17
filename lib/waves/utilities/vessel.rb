@@ -78,5 +78,9 @@ module WavesUtilities
         vessel_type
       end
     end
+
+    def other_vessel_type_selected?
+      vessel_type == "OTHER"
+    end
   end
 end
