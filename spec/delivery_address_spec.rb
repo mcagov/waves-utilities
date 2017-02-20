@@ -45,4 +45,8 @@ describe WavesUtilities::DeliveryAddress do
       expect(owner.address_1).to eq("My house")
     end
   end
+
+  context "::ATTRIBUTES" do
+    it { expect(WavesUtilities::DeliveryAddress::ATTRIBUTES).to include(:name) }
+  end
 end

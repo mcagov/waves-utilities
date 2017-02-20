@@ -13,7 +13,7 @@ module WavesUtilities
       params.each { |key, value| instance_variable_set("@#{key}", value) }
     end
 
-    attr_accessor(
+    ATTRIBUTES = [
       :name,
       :address_1,
       :address_2,
@@ -21,7 +21,9 @@ module WavesUtilities
       :town,
       :postcode,
       :country
-    )
+    ]
+
+    attr_accessor(*ATTRIBUTES)
 
     def inline_address
       [
