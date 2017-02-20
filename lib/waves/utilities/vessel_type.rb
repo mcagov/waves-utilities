@@ -12,6 +12,7 @@ module WavesUtilities
         "sailing yacht",
         "sports boat",
         "wet bike",
+        "other"
       ].map(&:upcase).freeze
     end
   end
