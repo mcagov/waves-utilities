@@ -32,6 +32,22 @@ describe WavesUtilities::DeliveryAddress do
           .to eq("10 DOWNING ST, WHITEHALL, LONDON")
       end
     end
+
+    context "#inline_name_and_address" do
+      let(:input_params) do
+        {
+          name: "BOB",
+          address_1: "10 DOWNING ST",
+          address_2: "WHITEHALL",
+          town: "LONDON",
+        }
+      end
+
+      it "rendes the expected address fields" do
+        expect(subject.inline_name_and_address)
+          .to eq("BOB, 10 DOWNING ST, WHITEHALL, LONDON")
+      end
+    end
   end
 
   context "#assign_attributes" do
