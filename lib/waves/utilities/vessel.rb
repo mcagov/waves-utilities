@@ -49,7 +49,8 @@ module WavesUtilities
       :place_of_build,
       :keel_laying_date,
       :hull_construction_material,
-      :yard_number
+      :yard_number,
+      :year_of_build
     ]
 
     attr_accessor(*ATTRIBUTES)
