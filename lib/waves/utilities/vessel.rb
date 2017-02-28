@@ -47,9 +47,9 @@ module WavesUtilities
       :name_of_builder,
       :builders_address,
       :place_of_build,
+      :country_of_build,
       :keel_laying_date,
       :hull_construction_material,
-      :yard_number,
       :year_of_build
     ]
 
