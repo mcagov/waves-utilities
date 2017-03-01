@@ -20,10 +20,8 @@ RSpec.describe WavesUtilities::Port do
   end
 
   context ".all" do
-    subject { described_class.all(:part_2) }
-
-    it "lists the countries" do
-      expect(subject.first).to eq(["ABERDEEN", "A"])
+    it "lists the countries for all parts" do
+      expect(described_class.all.first).to eq(["ABERDEEN", "A"])
     end
   end
 end
