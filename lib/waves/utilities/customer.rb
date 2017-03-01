@@ -21,7 +21,9 @@ module WavesUtilities
       :registration_number,
       :managing_owner,
       :correspondent,
-      :shares_held
+      :shares_held,
+      :entity_type,
+      :eligibility_status
     )
 
     def initialize(params = {})
