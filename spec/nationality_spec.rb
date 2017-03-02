@@ -5,7 +5,7 @@ RSpec.describe WavesUtilities::Nationality do
     subject { described_class.all }
 
     it "lists the nationalities" do
-      expect(subject.first).to eq("AKROTIRI AND DHEKELIA")
+      expect(subject.first).to eq("UNITED KINGDOM")
     end
   end
 end

@@ -9,6 +9,7 @@ module WavesUtilities
 
       def raw_list
         [
+          ['UNITED KINGDOM','British Citizen'],
           ['AKROTIRI AND DHEKELIA','British Overseas Territory (British Dependent Territory)'],
           ['ANGUILLA','British Overseas Territory (British Dependent Territory)'],
           ['ANTIGUA BRD','Commonwealth Citizen'],
