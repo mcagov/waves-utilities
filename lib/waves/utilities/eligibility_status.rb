@@ -1,5 +1,4 @@
 class WavesUtilities::EligibilityStatus
-
   class << self
     def all
       [

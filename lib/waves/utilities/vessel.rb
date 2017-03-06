@@ -1,6 +1,5 @@
 module WavesUtilities
   class Vessel
-
     ATTRIBUTES = [
       :name,
       :hin,
