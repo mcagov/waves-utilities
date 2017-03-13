@@ -152,6 +152,7 @@ module WavesUtilities
           ["General Enquiry", :enquiry],
           ["Registrar Closure", :registrar_closure],
           ["Registrar Restores Closure", :registrar_restores_closure],
+          ["Mortgage(s)", :mortgage],
           ["Manual Override", :manual_override],
           ["Unknown", :unknown]]
       end
