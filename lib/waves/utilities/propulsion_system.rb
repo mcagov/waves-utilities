@@ -1,4 +1,16 @@
 class WavesUtilities::PropulsionSystem
+  def initialize(code)
+    @code = code.to_sym
+  end
+
+  def name
+    ret =
+      WavesUtilities::PropulsionSystem.all.find do
+        |propulsion_system| propulsion_system[1] == @code
+    end
+    ret ? ret[0] : ""
+  end
+
   class << self
     def all
       [
