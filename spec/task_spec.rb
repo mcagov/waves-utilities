@@ -207,6 +207,20 @@ describe WavesUtilities::Task do
     end
   end
 
+  context "#referrable?" do
+    subject { task.referrable? }
+
+    context "for a new_registration" do
+      let(:key) { :new_registration }
+      it { expect(subject).to be_truthy }
+    end
+
+    context "for a closure" do
+      let(:key) { :manual_override }
+      it { expect(subject).to be_falsey }
+    end
+  end
+
   context ".finance_task_types" do
     it do
       [:change_address, :closure].each do |task_type|

@@ -109,6 +109,10 @@ module WavesUtilities
         :duplicate_certificate, :enquiry].include?(@key)
     end
 
+    def referrable?
+      ![:manual_override].include?(@key)
+    end
+
     class << self
       def finance_task_types
         all_task_types.delete_if do |t|
