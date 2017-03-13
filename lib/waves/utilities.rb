@@ -1,6 +1,7 @@
 require "waves/utilities/customer"
 require "waves/utilities/agent"
 require "waves/utilities/owner"
+require "waves/utilities/classification_society"
 require "waves/utilities/country"
 require "waves/utilities/delivery_address"
 require "waves/utilities/document_type"
