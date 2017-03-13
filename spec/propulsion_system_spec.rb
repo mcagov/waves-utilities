@@ -4,6 +4,6 @@ RSpec.describe WavesUtilities::PropulsionSystem do
   context ".all" do
     subject { described_class.all }
 
-    it { expect(subject.first).to eq("None (dumb)") }
+    it { expect(subject.first).to eq(["None (dumb)", :none]) }
   end
 end
