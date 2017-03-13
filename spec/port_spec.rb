@@ -7,13 +7,13 @@ RSpec.describe WavesUtilities::Port do
     subject { port.name }
 
     context "with a valid port_code" do
-      let(:code) { "BD"}
+      let(:code) { "BD" }
 
       it { expect(subject).to eq("BIDEFORD") }
     end
 
     context "with an invalid port_code" do
-      let(:code) { "FOOOO"}
+      let(:code) { "FOOOO" }
 
       it { expect(subject).to eq("") }
     end
