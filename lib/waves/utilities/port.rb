@@ -55,6 +55,7 @@ class WavesUtilities::Port
         ["E", "EXETER "],
         ["FH", "FALMOUTH"],
         ["F", "FAVERSHAM"],
+        ["FIS", "FISHGUARD"],
         ["FD", "FLEETWOOD "],
         ["FE", "FOLKESTONE "],
         ["FY", "FOWEY "],
@@ -102,6 +103,7 @@ class WavesUtilities::Port
         ["PD", "PETERHEAD "],
         ["PH", "PLYMOUTH "],
         ["PE", "POOLE "],
+        ["PO", "PORTLAND"],
         ["P", "PORTSMOUTH "],
         ["PT", "PORT TALBOT "],
         ["PN", "PRESTON "],
