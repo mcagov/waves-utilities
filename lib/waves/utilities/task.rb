@@ -44,7 +44,7 @@ module WavesUtilities
     end
 
     def payment_required?
-      ![:change_address, :closure, :enquiry].include?(@key)
+      ![:change_address, :closure, :enquiry, :manual_override].include?(@key)
     end
 
     def print_job_templates
@@ -85,7 +85,7 @@ module WavesUtilities
       [
         :change_owner, :change_vessel, :change_address,
         :re_registration, :new_registration, :renewal,
-        :manual_override].include?(@key)
+        :manual_override, :mortgage].include?(@key)
     end
 
     def builds_registration?
@@ -98,7 +98,8 @@ module WavesUtilities
       [
         :new_registration, :renewal, :re_registration,
         :change_owner, :change_vessel, :change_address,
-        :closure, :current_transcript, :historic_transcript].include?(@key)
+        :closure, :current_transcript, :historic_transcript,
+        :mortgage].include?(@key)
     end
 
     def emails_application_receipt?
@@ -106,7 +107,7 @@ module WavesUtilities
         :new_registration, :renewal, :re_registration,
         :change_owner, :change_vessel, :change_address,
         :closure, :current_transcript, :historic_transcript,
-        :duplicate_certificate, :enquiry].include?(@key)
+        :duplicate_certificate, :enquiry, :mortgage].include?(@key)
     end
 
     def referrable?

@@ -78,6 +78,7 @@ describe WavesUtilities::Task do
       it { expect(subject).to be_truthy }
     end
   end
+
   context "#ownership_can_be_changed?" do
     subject { task.ownership_can_be_changed? }
 
@@ -170,6 +171,11 @@ describe WavesUtilities::Task do
 
     context "for a new_registration" do
       let(:key) { :new_registration }
+      it { expect(subject).to be_truthy }
+    end
+
+    context "for a mortgage" do
+      let(:key) { :mortgage }
       it { expect(subject).to be_truthy }
     end
 
