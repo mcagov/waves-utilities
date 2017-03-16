@@ -24,6 +24,9 @@ module WavesUtilities
       :last_registry_country,
       :last_registry_no,
       :last_registry_port,
+      :underlying_registry,
+      :underlying_registry_identity_no,
+      :underlying_registry_port,
 
       # added to support part_2 #Operational Information section
       :classification_society,
@@ -31,6 +34,10 @@ module WavesUtilities
       :entry_into_service_at,
       :area_of_operation,
       :alternative_activity,
+      :smc_issuing_authority,
+      :smc_auditor,
+      :issc_issuing_authority,
+      :issc_auditor,
 
       # added to support part_2 #Description section
       :gross_tonnage,
