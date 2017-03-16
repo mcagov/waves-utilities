@@ -37,6 +37,28 @@ describe WavesUtilities::Vessel do
         end
       end
     end
+
+    context "pln" do
+      let(:input_params) { { port_code: "ABC", port_no: "12345" } }
+
+      it "builds the pln" do
+        expect(subject.pln).to eq("ABC12345")
+      end
+    end
+
+    context "port_name" do
+      context "with a port_code" do
+        let(:input_params) { { port_code: "SU" } }
+
+        it { expect(subject.port_name).to eq("SOUTHAMPTON") }
+      end
+
+      context "with a blank port_code" do
+        let(:input_params) { { port_code: nil } }
+
+        it { expect(subject.port_name).to eq(nil) }
+      end
+    end
   end
 
   context "#assign_attributes" do
