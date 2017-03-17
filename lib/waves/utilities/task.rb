@@ -28,7 +28,7 @@ module WavesUtilities
     def ownership_can_be_changed?
       [
         :new_registration, :change_owner, :renewal, :re_registration,
-        :manual_override, :mortgage
+        :manual_override
       ].include?(@key)
     end
 
