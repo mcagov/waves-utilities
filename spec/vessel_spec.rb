@@ -76,4 +76,51 @@ describe WavesUtilities::Vessel do
   context "::ATTRIBUTES" do
     it { expect(WavesUtilities::Vessel::ATTRIBUTES).to include(:name) }
   end
+
+  context ".attributes_for" do
+    subject { described_class.attributes_for(part, fishing_vessel) }
+
+    let(:fishing_vessel) { false }
+
+    context "part_1" do
+      let(:part) { :part_1 }
+
+      it { expect(subject).not_to include(:port_no) }
+      it { expect(subject).to include(:last_registry_country) }
+      it { expect(subject).not_to include(:underlying_registry) }
+      it { expect(subject).to include(:smc_issuing_authority) }
+      it { expect(subject).not_to include(:entry_into_service_at) }
+    end
+
+    context "part_2" do
+      let(:part) { :part_2 }
+
+      it { expect(subject).to include(:port_no) }
+      it { expect(subject).to include(:last_registry_country) }
+      it { expect(subject).not_to include(:underlying_registry) }
+      it { expect(subject).not_to include(:smc_issuing_authority) }
+      it { expect(subject).to include(:entry_into_service_at) }
+    end
+
+    context "part_4" do
+      let(:part) { :part_4 }
+
+      it { expect(subject).not_to include(:port_no) }
+      it { expect(subject).not_to include(:last_registry_country) }
+      it { expect(subject).to include(:underlying_registry) }
+      it { expect(subject).to include(:smc_issuing_authority) }
+      it { expect(subject).not_to include(:entry_into_service_at) }
+    end
+
+    context "part_4 fishing" do
+      let(:part) { :part_4 }
+      let(:fishing_vessel) { true }
+
+      it { expect(subject).to include(:port_no) }
+      it { expect(subject).not_to include(:last_registry_country) }
+      it { expect(subject).to include(:underlying_registry) }
+      it { expect(subject).to include(:smc_issuing_authority) }
+      it { expect(subject).to include(:entry_into_service_at) }
+    end
+  end
 end
