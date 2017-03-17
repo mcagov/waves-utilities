@@ -119,7 +119,7 @@ describe WavesUtilities::Vessel do
       it { expect(subject).to include(:port_no) }
       it { expect(subject).not_to include(:last_registry_country) }
       it { expect(subject).to include(:underlying_registry) }
-      it { expect(subject).to include(:smc_issuing_authority) }
+      it { expect(subject).not_to include(:smc_issuing_authority) }
       it { expect(subject).to include(:entry_into_service_at) }
     end
   end

@@ -13,7 +13,7 @@ module WavesUtilities
             underlying_registry_fields + smc_fields
           when :part_4
             if fishing_vessel
-              last_registry_fields
+              last_registry_fields + smc_fields
             else
               port_no_fields + last_registry_fields + service_description_fields
             end
