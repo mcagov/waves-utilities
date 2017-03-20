@@ -114,6 +114,10 @@ module WavesUtilities
       ![:manual_override].include?(@key)
     end
 
+    def issues_csr?
+      [:issue_csr].include?(@key)
+    end
+
     class << self
       def finance_task_types
         all_task_types.delete_if do |t|
@@ -154,6 +158,7 @@ module WavesUtilities
           ["Registrar Closure", :registrar_closure],
           ["Registrar Restores Closure", :registrar_restores_closure],
           ["Mortgage(s)", :mortgage],
+          ["Issue CSR", :issue_csr],
           ["Manual Override", :manual_override],
           ["Unknown", :unknown]]
       end

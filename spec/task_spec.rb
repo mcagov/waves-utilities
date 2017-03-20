@@ -227,6 +227,20 @@ describe WavesUtilities::Task do
     end
   end
 
+  context "#issues_csr?" do
+    subject { task.issues_csr? }
+
+    context "for a new_registration" do
+      let(:key) { :new_registration }
+      it { expect(subject).to be_falsey }
+    end
+
+    context "for a csr" do
+      let(:key) { :issue_csr }
+      it { expect(subject).to be_truthy }
+    end
+  end
+
   context ".finance_task_types" do
     it do
       [:change_address, :closure].each do |task_type|
