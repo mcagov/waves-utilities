@@ -4,11 +4,12 @@ class WavesUtilities::ClassificationSociety
       [
         "American Bureau of Shipping",
         "Bureau Veritas",
-        "Det Norske Veritas",
-        "Germanischer Lloyd",
-        "DNV GL",
-        "Lloyds Register of Shipping",
         "ClassNK",
+        "Det Norske Veritas",
+        "DNV GL",
+        "Germanischer Lloyd",
+        "Lloyds Register of Shipping",
+        "MCA",
         "Registro Italiano Navale"
       ]
     end
