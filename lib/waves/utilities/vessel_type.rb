@@ -1,7 +1,7 @@
 module WavesUtilities
   class VesselType
     class << self
-      def all(part = :part_3)
+      def all(part = :part_3, fishing_vessel = false)
         @part = part.to_sym
 
         list =
@@ -9,20 +9,51 @@ module WavesUtilities
           when :part_1
             part_1_list
           when :part_2
-            part_2_list
+            fishing_list
           when :part_3
             part_3_list
           when :part_4
-            part_4_list
+            fishing_vessel ? fishing_list : part_1_list
           end
         list.map(&:upcase).freeze
       end
 
+      private
+
       def part_1_list
-        ["General Cargo Ship", "Barge"]
+        ["Bulk carrier",
+         "Combination carrier",
+         "Containership",
+         "Chemical tanker",
+         "Commercial Yacht",
+         "Dredger ",
+         "Factory ship",
+         "Fishing Vessel",
+         "FPSO",
+         "General cargo/ multi purpose ship",
+         "Gas carrier",
+         "Heavy load carrier",
+         "High speed cargo craft",
+         "High speed passenger craft",
+         "Livestock Carrier",
+         "Mobile offshore drilling unit",
+         "Mobile offshore units",
+         "NLS Tanker",
+         "Oil tanker",
+         "Offshore service vessel",
+         "Other types of ship",
+         "Pleasure Vessel",
+         "Passenger ship",
+         "Ro-Ro cargo ship",
+         "Ro-Ro passenger vessel",
+         "Refrigerated cargo carrier",
+         "Special purpose ship",
+         "Sail Training Vessel",
+         "Small Commercial Vessel",
+         "Tug"]
       end
 
-      def part_2_list
+      def fishing_list
         ["Fishing Vessel"]
       end
 
@@ -40,10 +71,6 @@ module WavesUtilities
           "Wet Bike",
           "Other"
         ]
-      end
-
-      def part_4_list
-        ["Part Four Vessel Type"]
       end
     end
   end
