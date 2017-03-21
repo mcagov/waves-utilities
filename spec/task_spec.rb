@@ -183,6 +183,11 @@ describe WavesUtilities::Task do
       let(:key) { [:closure, :change_address].sample }
       it { expect(subject).to be_falsey }
     end
+
+    context "for an issue_csr" do
+      let(:key) { :issue_csr }
+      it { expect(subject).to be_falsey }
+    end
   end
 
   context "#prints_certificate?" do
