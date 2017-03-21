@@ -56,6 +56,8 @@ module WavesUtilities
         [:current_transcript]
       elsif prints_historic_transcript?
         [:historic_transcript]
+      elsif @key == :issue_csr
+        [:csr_form]
       end
     end
 
