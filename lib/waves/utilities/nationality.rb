@@ -65,7 +65,6 @@ module WavesUtilities
           ['TANZANIA','Commonwealth Citizen'],
           ['TRINIDAD & TOBAGO','Commonwealth Citizen'],
           ['TURKEY','European Economic Area Country'],
-          ['UNITED KINGDOM','British Citizen'],
         ]
       end
     end
