@@ -11,6 +11,11 @@ describe WavesUtilities::Task do
       it { expect(subject).to eq("New Registration") }
     end
 
+    context "of a provisional" do
+      let(:key) { :provisional }
+      it { expect(subject).to eq("Provisional Registration") }
+    end
+
     context "of a change_vessel" do
       let(:key) { :change_vessel }
       it { expect(subject).to eq("Change of Vessel details") }
@@ -252,6 +257,11 @@ describe WavesUtilities::Task do
     context "for a new_registration" do
       let(:key) { :new_registration }
       it { expect(subject).to eq([:registration_certificate, :cover_letter]) }
+    end
+
+    context "for a provisional" do
+      let(:key) { :provisional }
+      it { expect(subject).to eq([:provisional_certificate]) }
     end
 
     context "for a csr" do

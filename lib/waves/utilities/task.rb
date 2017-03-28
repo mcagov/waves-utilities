@@ -13,7 +13,9 @@ module WavesUtilities
     end
 
     def declarations_required_on_create?
-      [:new_registration, :re_registration, :renewal].include?(@key)
+      [
+        :new_registration, :provisional, :re_registration, :renewal
+      ].include?(@key)
     end
 
     def declarations_required_on_add_owner?
@@ -27,8 +29,8 @@ module WavesUtilities
 
     def ownership_can_be_changed?
       [
-        :new_registration, :change_owner, :renewal, :re_registration,
-        :manual_override
+        :new_registration, :provisional, :change_owner, :renewal,
+        :re_registration, :manual_override
       ].include?(@key)
     end
 
@@ -38,8 +40,8 @@ module WavesUtilities
 
     def vessel_can_be_edited?
       [
-        :new_registration, :change_vessel, :renewal, :re_registration,
-        :manual_override
+        :new_registration, :provisional, :change_vessel, :renewal,
+         :re_registration, :manual_override
       ].include?(@key)
     end
 
@@ -52,6 +54,8 @@ module WavesUtilities
     def print_job_templates
       if prints_certificate?
         [:registration_certificate, :cover_letter]
+      elsif prints_provisional_certificate?
+        [:provisional_certificate]
       elsif prints_current_transcript?
         [:current_transcript]
       elsif prints_historic_transcript?
@@ -66,6 +70,10 @@ module WavesUtilities
         :new_registration, :change_owner, :change_vessel, :renewal,
         :duplicate_certificate, :re_registration
       ].include?(@key)
+    end
+
+    def prints_provisional_certificate?
+      [:provisional].include?(@key)
     end
 
     def prints_current_transcript?
@@ -88,19 +96,19 @@ module WavesUtilities
     def builds_registry?
       [
         :change_owner, :change_vessel, :change_address,
-        :re_registration, :new_registration, :renewal,
+        :re_registration, :new_registration, :provisional, :renewal,
         :manual_override, :mortgage].include?(@key)
     end
 
     def builds_registration?
       [
-        :change_owner, :change_vessel,
+        :change_owner, :change_vessel, :provisional,
         :re_registration, :new_registration, :renewal].include?(@key)
     end
 
     def emails_application_approval?
       [
-        :new_registration, :renewal, :re_registration,
+        :new_registration, :renewal, :re_registration, :provisional,
         :change_owner, :change_vessel, :change_address,
         :closure, :current_transcript, :historic_transcript,
         :mortgage].include?(@key)
@@ -108,7 +116,7 @@ module WavesUtilities
 
     def emails_application_receipt?
       [
-        :new_registration, :renewal, :re_registration,
+        :new_registration, :renewal, :re_registration, :provisional,
         :change_owner, :change_vessel, :change_address,
         :closure, :current_transcript, :historic_transcript,
         :duplicate_certificate, :enquiry, :mortgage].include?(@key)
@@ -149,6 +157,7 @@ module WavesUtilities
       def all_task_types
         [
           ["New Registration", :new_registration],
+          ["Provisional Registration", :provisional],
           ["Renewal of Registration", :renewal],
           ["Re-Registration", :re_registration],
           ["Change of Ownership", :change_owner],
