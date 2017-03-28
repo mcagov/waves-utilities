@@ -55,7 +55,7 @@ module WavesUtilities
       if prints_certificate?
         [:registration_certificate, :cover_letter]
       elsif prints_provisional_certificate?
-        [:provisional_certificate]
+        [:provisional_certificate, :cover_letter]
       elsif prints_current_transcript?
         [:current_transcript]
       elsif prints_historic_transcript?

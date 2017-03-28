@@ -261,7 +261,7 @@ describe WavesUtilities::Task do
 
     context "for a provisional" do
       let(:key) { :provisional }
-      it { expect(subject).to eq([:provisional_certificate]) }
+      it { expect(subject).to eq([:provisional_certificate, :cover_letter]) }
     end
 
     context "for a csr" do
