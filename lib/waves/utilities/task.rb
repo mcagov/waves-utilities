@@ -47,7 +47,7 @@ module WavesUtilities
 
     def payment_required?
       ![
-        :change_address, :closure, :enquiry,
+        :change_address, :closure, :enquiry, :termination_notice,
         :issue_csr, :manual_override].include?(@key)
     end
 
@@ -62,6 +62,8 @@ module WavesUtilities
         [:historic_transcript]
       elsif @key == :issue_csr
         [:csr_form]
+      elsif @key == :termination_notice
+        [:termination_notice]
       end
     end
 
@@ -169,6 +171,7 @@ module WavesUtilities
           ["Duplicate Certificate", :duplicate_certificate],
           ["General Enquiry", :enquiry],
           ["Registration Closure: Owner Request", :registrar_closure],
+          ["Registration Closure: Notice of Termination", :termination_notice],
           ["Registrar Restores Closure", :registrar_restores_closure],
           ["Mortgage(s)", :mortgage],
           ["Issue CSR", :issue_csr],

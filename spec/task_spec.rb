@@ -269,6 +269,11 @@ describe WavesUtilities::Task do
       it { expect(subject).to eq([:csr_form]) }
     end
 
+    context "for a termination_notice" do
+      let(:key) { :termination_notice }
+      it { expect(subject).to eq([:termination_notice]) }
+    end
+
     context "for a manual_override" do
       let(:key) { :manual_override }
       it { expect(subject).to be_nil }
