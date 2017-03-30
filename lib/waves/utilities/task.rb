@@ -168,7 +168,7 @@ module WavesUtilities
           ["Historic Transcript of Registry", :historic_transcript],
           ["Duplicate Certificate", :duplicate_certificate],
           ["General Enquiry", :enquiry],
-          ["Registrar Closure", :registrar_closure],
+          ["Registration Closure: Owner Request", :registrar_closure],
           ["Registrar Restores Closure", :registrar_restores_closure],
           ["Mortgage(s)", :mortgage],
           ["Issue CSR", :issue_csr],
