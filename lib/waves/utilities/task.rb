@@ -48,7 +48,8 @@ module WavesUtilities
     def payment_required?
       ![
         :change_address, :closure, :enquiry, :termination_notice,
-        :issue_csr, :manual_override].include?(@key)
+        :registrar_closure, :registrar_restores_closure, :issue_csr,
+        :manual_override].include?(@key)
     end
 
     def print_job_templates
