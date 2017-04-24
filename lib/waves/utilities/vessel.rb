@@ -100,7 +100,6 @@ module WavesUtilities
       :imo_number,
       :port_code,
       :port_no,
-      :ec_number,
       :last_registry_country,
       :last_registry_no,
       :last_registry_port,
