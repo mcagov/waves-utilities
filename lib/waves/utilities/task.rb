@@ -146,7 +146,7 @@ module WavesUtilities
 
       def govuk_task_types
         [
-          :new_registration, :renewal, :re_registration, :change_owner,
+          :new_registration, :renewal, :change_owner,
           :change_vessel, :change_address, :duplicate_certificate,
           :current_transcript, :historic_transcript, :closure
         ]
