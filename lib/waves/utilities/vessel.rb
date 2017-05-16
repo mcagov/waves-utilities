@@ -106,6 +106,7 @@ module WavesUtilities
       :underlying_registry,
       :underlying_registry_identity_no,
       :underlying_registry_port,
+      :name_on_primary_register,
 
       # added to support part_2 #Operational Information section
       :classification_society,
