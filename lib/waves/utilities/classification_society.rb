@@ -8,6 +8,7 @@ class WavesUtilities::ClassificationSociety
         "Det Norske Veritas",
         "DNV GL",
         "Germanischer Lloyd",
+        "Government of the United Kingdom",
         "Lloyds Register of Shipping",
         "MCA",
         "Registro Italiano Navale"
