@@ -5,6 +5,7 @@ module WavesUtilities
         :sold,
         :destroyed,
         :registered_elsewhere,
+        :other,
       ].freeze
 
     attr_accessor(
