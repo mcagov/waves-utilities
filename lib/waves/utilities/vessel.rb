@@ -23,7 +23,7 @@ module WavesUtilities
       end
 
       def port_no_fields
-        [:port_no, :ec_number]
+        [:port_no, :ec_no]
       end
 
       def last_registry_fields
@@ -93,6 +93,7 @@ module WavesUtilities
       :alt_name_3,
       :vessel_type,
       :vessel_type_other,
+      :ec_no,
 
       # added to support part_2 #Identity section
       :registration_type,
