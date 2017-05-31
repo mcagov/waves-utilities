@@ -8,6 +8,12 @@ module WavesUtilities
         :other,
       ].freeze
 
+    INTERNAL_REASONS =
+      [
+        :failed_to_renew,
+        :no_longer_eligible,
+      ].freeze
+
     attr_accessor(
       :reason,
       :current_step,
