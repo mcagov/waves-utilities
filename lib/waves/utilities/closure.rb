@@ -16,6 +16,7 @@ module WavesUtilities
 
     attr_accessor(
       :reason,
+      :other_reason,
       :current_step,
       :actioned_day,
       :actioned_month,
