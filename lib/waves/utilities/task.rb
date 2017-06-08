@@ -141,7 +141,12 @@ module WavesUtilities
       end
 
       def default_task_types
-        all_task_types.delete_if { |t| t[1] == :unknown }
+        all_task_types.delete_if do |t|
+          [
+            :registrar_closure, :termination_notice,
+            :registrar_restores_closure, :unknown
+          ].include?(t[1])
+        end
       end
 
       def govuk_task_types
@@ -153,7 +158,7 @@ module WavesUtilities
       end
 
       def validation_helper_task_type_list
-        default_task_types.map { |t| t[1].to_s }
+        all_task_types.map { |t| t[1].to_s }
       end
 
       # rubocop:disable Metrics/MethodLength
