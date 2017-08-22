@@ -100,7 +100,7 @@ module WavesUtilities
       [
         :change_owner, :change_vessel, :change_address,
         :re_registration, :new_registration, :provisional, :renewal,
-        :manual_override, :mortgage].include?(@key)
+        :manual_override, :mortgage, :closure].include?(@key)
     end
 
     def builds_registration?
