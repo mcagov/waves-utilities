@@ -12,6 +12,7 @@ module WavesUtilities
       [
         :failed_to_renew,
         :no_longer_eligible,
+        :at_owner_request,
       ].freeze
 
     attr_accessor(
