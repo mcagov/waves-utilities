@@ -119,6 +119,8 @@ module WavesUtilities
       :smc_auditor,
       :issc_issuing_authority,
       :issc_auditor,
+      :doc_issuing_authority,
+      :doc_auditor,
 
       # added to support part_2 #Description section
       :gross_tonnage,
