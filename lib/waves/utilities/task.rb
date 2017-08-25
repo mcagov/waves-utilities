@@ -1,5 +1,7 @@
 module WavesUtilities
   class Task
+    attr_reader :key
+
     def initialize(key)
       @key = key.to_sym
     end
