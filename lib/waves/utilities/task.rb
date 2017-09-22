@@ -43,13 +43,14 @@ module WavesUtilities
     def vessel_can_be_edited?
       [
         :new_registration, :provisional, :change_vessel, :renewal,
-         :re_registration, :manual_override
+        :re_registration, :manual_override, :simple_to_full
       ].include?(@key)
     end
 
     def payment_required?
       ![
         :change_address, :closure, :enquiry, :termination_notice,
+        :simple_to_full,
         :registrar_closure, :registrar_restores_closure, :issue_csr,
         :manual_override].include?(@key)
     end
@@ -72,7 +73,8 @@ module WavesUtilities
 
     def prints_certificate?
       [
-        :new_registration, :change_owner, :change_vessel, :renewal,
+        :new_registration, :change_owner, :change_vessel,
+        :simple_to_full, :renewal,
         :duplicate_certificate, :re_registration
       ].include?(@key)
     end
@@ -94,13 +96,17 @@ module WavesUtilities
     end
 
     def renews_certificate?
-      [:change_owner, :change_vessel, :renewal, :re_registration]
+      [
+        :change_owner, :change_vessel, :renewal, :re_registration,
+        :simple_to_full
+      ]
         .include?(@key)
     end
 
     def builds_registry?
       [
         :change_owner, :change_vessel, :change_address,
+        :simple_to_full,
         :re_registration, :new_registration, :provisional, :renewal,
         :manual_override, :mortgage, :closure].include?(@key)
     end
@@ -115,6 +121,7 @@ module WavesUtilities
       [
         :new_registration, :renewal, :re_registration, :provisional,
         :change_owner, :change_vessel, :change_address,
+        :simple_to_full,
         :closure, :current_transcript, :historic_transcript,
         :mortgage].include?(@key)
     end
@@ -123,6 +130,7 @@ module WavesUtilities
       [
         :new_registration, :renewal, :re_registration, :provisional,
         :change_owner, :change_vessel, :change_address,
+        :simple_to_full,
         :closure, :current_transcript, :historic_transcript,
         :duplicate_certificate, :enquiry, :mortgage].include?(@key)
     end
@@ -168,6 +176,7 @@ module WavesUtilities
         [
           ["New Registration", :new_registration],
           ["Provisional Registration", :provisional],
+          ["Convert simple registry to full registry", :simple_to_full],
           ["Renewal of Registration", :renewal],
           ["Re-Registration", :re_registration],
           ["Change of Ownership", :change_owner],
