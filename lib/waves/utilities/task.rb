@@ -176,7 +176,7 @@ module WavesUtilities
         [
           ["New Registration", :new_registration],
           ["Provisional Registration", :provisional],
-          ["Convert simple registry to full registry", :simple_to_full],
+          ["Convert Simple Registry to Full Registry", :simple_to_full],
           ["Renewal of Registration", :renewal],
           ["Re-Registration", :re_registration],
           ["Change of Ownership", :change_owner],
