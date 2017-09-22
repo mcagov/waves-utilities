@@ -193,6 +193,11 @@ describe WavesUtilities::Task do
       let(:key) { :issue_csr }
       it { expect(subject).to be_falsey }
     end
+
+    context "for a simple_to_full" do
+      let(:key) { :simple_to_full }
+      it { expect(subject).to be_truthy }
+    end
   end
 
   context "#prints_certificate?" do

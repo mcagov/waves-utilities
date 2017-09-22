@@ -50,7 +50,6 @@ module WavesUtilities
     def payment_required?
       ![
         :change_address, :closure, :enquiry, :termination_notice,
-        :simple_to_full,
         :registrar_closure, :registrar_restores_closure, :issue_csr,
         :manual_override].include?(@key)
     end
