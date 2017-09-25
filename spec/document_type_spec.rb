@@ -19,10 +19,26 @@ RSpec.describe WavesUtilities::DocumentType do
     end
   end
 
-  context ".all" do
-    it "lists the document_types for all parts" do
+  context ".all(part_1)" do
+    it "includes the code_certificate" do
+      expect(described_class.all(:part_1))
+        .to include(code_certificate)
+    end
+  end
+
+  context ".all(part_2)" do
+    it "lists the document_types for part_2" do
       expect(described_class.all(:part_2).first)
         .to eq(["Bill of Sale", "bill_of_sale"])
     end
+
+    it "does not include the code_certificate" do
+      expect(described_class.all(:part_2))
+        .not_to include(code_certificate)
+    end
   end
+end
+
+def code_certificate
+  ["Code Certificate", "code_certificate"]
 end

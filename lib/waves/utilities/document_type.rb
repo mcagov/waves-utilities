@@ -12,15 +12,23 @@ class WavesUtilities::DocumentType
   end
 
   class << self
-    def all(_part = nil)
-      part_2
+    def all(part = nil)
+      case (part || "").to_sym
+      when :part_2, :part_3, :part_4
+        complete_list.reject { |l| l[1] == "code_certificate" }
+      else
+        complete_list
+      end
     end
 
-    def part_2
+    private
+
+    def complete_list
       [
         ["Bill of Sale", "bill_of_sale"],
         ["Builders Certificate", "builders_certificate"],
         ["Carving & Marking Note", "carving_and_marking"],
+        ["Code Certificate", "code_certificate"],
         ["Certificate of Survey", "certificate_of_survey"],
         ["Engine Manufacturers Data Sheet(s)", "engine_manufacturers_data_sheet"],
         ["Engine Receipt", "engine_recipient"],
