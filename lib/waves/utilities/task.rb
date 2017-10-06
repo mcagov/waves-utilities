@@ -51,7 +51,7 @@ module WavesUtilities
       ![
         :change_address, :closure, :enquiry, :termination_notice,
         :registrar_closure, :registrar_restores_closure, :issue_csr,
-        :manual_override].include?(@key)
+        :manual_override, :mortgage_other].include?(@key)
     end
 
     def print_job_templates
@@ -107,7 +107,7 @@ module WavesUtilities
         :change_owner, :change_vessel, :change_address,
         :simple_to_full,
         :re_registration, :new_registration, :provisional, :renewal,
-        :manual_override, :mortgage, :closure].include?(@key)
+        :manual_override, :mortgage, :closure, :mortgage_other].include?(@key)
     end
 
     def builds_registration?
@@ -122,7 +122,7 @@ module WavesUtilities
         :change_owner, :change_vessel, :change_address,
         :simple_to_full,
         :closure, :current_transcript, :historic_transcript,
-        :mortgage].include?(@key)
+        :mortgage, :mortgage_other].include?(@key)
     end
 
     def emails_application_receipt?
@@ -131,7 +131,8 @@ module WavesUtilities
         :change_owner, :change_vessel, :change_address,
         :simple_to_full,
         :closure, :current_transcript, :historic_transcript,
-        :duplicate_certificate, :enquiry, :mortgage].include?(@key)
+        :duplicate_certificate, :enquiry, :mortgage, :mortgage_other
+      ].include?(@key)
     end
 
     def referrable?
@@ -189,7 +190,8 @@ module WavesUtilities
           ["Registration Closure: Owner Request", :registrar_closure],
           ["Registration Closure: Notice of Termination", :termination_notice],
           ["Registrar Restores Closure", :registrar_restores_closure],
-          ["Mortgage(s)", :mortgage],
+          ["Mortgage(s): Registration", :mortgage],
+          ["Mortgage(s): Other", :mortgage_other],
           ["Issue CSR", :issue_csr],
           ["Manual Override", :manual_override],
           ["Unknown", :unknown]]
