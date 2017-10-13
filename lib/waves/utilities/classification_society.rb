@@ -4,14 +4,17 @@ class WavesUtilities::ClassificationSociety
       [
         "American Bureau of Shipping",
         "Bureau Veritas",
-        "ClassNK",
-        "Det Norske Veritas",
-        "DNV GL",
-        "Germanischer Lloyd",
-        "Government of the United Kingdom",
+        "Cayman Islands Shipping Register",
+        "Class NK",
+        "DNV-GL",
+        "Gibraltar Maritime Administration",
+        "Bermuda Shipping and Maritime Authority",
+        "Isle of Man Shipping Registry",
         "Lloyds Register of Shipping",
-        "MCA",
-        "Registro Italiano Navale"
+        "Maritime and Coastguard Agency",
+        "Registro Italiano Navale (RINA)",
+        "Virgin Islands Shipping Register",
+        "Other",
       ]
     end
   end
