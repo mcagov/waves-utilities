@@ -42,7 +42,7 @@ describe WavesUtilities::Vessel do
       let(:input_params) { { port_code: "ABC", port_no: "12345" } }
 
       it "builds the pln" do
-        expect(subject.pln).to eq("ABC12345")
+        expect(subject.pln).to eq("ABC 12345")
       end
     end
 
