@@ -67,6 +67,8 @@ module WavesUtilities
         [:csr_form]
       elsif @key == :termination_notice
         [:termination_notice]
+      elsif @key == :section_notice
+        [:section_notice]
       end
     end
 
@@ -153,7 +155,7 @@ module WavesUtilities
       def default_task_types
         all_task_types.delete_if do |t|
           [
-            :registrar_closure, :termination_notice,
+            :registrar_closure, :termination_notice, :section_notice,
             :registrar_restores_closure, :unknown
           ].include?(t[1])
         end
@@ -189,6 +191,7 @@ module WavesUtilities
           ["General Enquiry", :enquiry],
           ["Registration Closure: Owner Request", :registrar_closure],
           ["Registration Closure: 7 Day Notice of Termination", :termination_notice],
+          ["Registration Closure: Section Notice", :section_notice],
           ["Registrar Restores Closure", :registrar_restores_closure],
           ["Mortgage(s): Registration", :mortgage],
           ["Mortgage(s): Other", :mortgage_other],

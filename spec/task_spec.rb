@@ -279,6 +279,11 @@ describe WavesUtilities::Task do
       it { expect(subject).to eq([:termination_notice]) }
     end
 
+    context "for a section_notice" do
+      let(:key) { :section_notice }
+      it { expect(subject).to eq([:section_notice]) }
+    end
+
     context "for a manual_override" do
       let(:key) { :manual_override }
       it { expect(subject).to be_nil }
