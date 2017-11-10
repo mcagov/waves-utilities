@@ -188,7 +188,7 @@ module WavesUtilities
           ["Duplicate Certificate", :duplicate_certificate],
           ["General Enquiry", :enquiry],
           ["Registration Closure: Owner Request", :registrar_closure],
-          ["Registration Closure: Notice of Termination", :termination_notice],
+          ["Registration Closure: 7 Day Notice of Termination", :termination_notice],
           ["Registrar Restores Closure", :registrar_restores_closure],
           ["Mortgage(s): Registration", :mortgage],
           ["Mortgage(s): Other", :mortgage_other],
