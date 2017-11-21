@@ -51,7 +51,7 @@ module WavesUtilities
       ![
         :change_address, :closure, :enquiry, :termination_notice,
         :registrar_closure, :registrar_restores_closure, :issue_csr,
-        :manual_override, :mortgage_other].include?(@key)
+        :forced_closure, :manual_override, :mortgage_other].include?(@key)
     end
 
     def print_job_templates
@@ -156,7 +156,7 @@ module WavesUtilities
         all_task_types.delete_if do |t|
           [
             :registrar_closure, :termination_notice, :section_notice,
-            :registrar_restores_closure, :unknown
+            :forced_closure, :registrar_restores_closure, :unknown
           ].include?(t[1])
         end
       end
@@ -190,6 +190,7 @@ module WavesUtilities
           ["Duplicate Certificate", :duplicate_certificate],
           ["General Enquiry", :enquiry],
           ["Registration Closure: Owner Request", :registrar_closure],
+          ["Registration Closure: Close Without Notice", :forced_closure],
           ["Registration Closure: 7 Day Notice of Termination", :termination_notice],
           ["Registration Closure: 30 Day Section Notice", :section_notice],
           ["Registrar Restores Closure", :registrar_restores_closure],
