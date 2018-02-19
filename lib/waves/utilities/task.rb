@@ -188,7 +188,7 @@ module WavesUtilities
           ["Current Transcript of Registry", :current_transcript],
           ["Historic Transcript of Registry", :historic_transcript],
           ["Duplicate Certificate", :duplicate_certificate],
-          ["General Enquiry", :enquiry],
+          ["General notification / non-fee task", :enquiry],
           ["Registration Closure: Owner Request", :registrar_closure],
           ["Registration Closure: Close Without Notice", :forced_closure],
           ["Registration Closure: 7 Day Notice of Termination", :termination_notice],
