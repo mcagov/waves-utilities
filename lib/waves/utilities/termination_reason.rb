@@ -5,7 +5,6 @@ module WavesUtilities
         [
           "56(1)(aa) the registered owner has not notified the Registrar that ownership of the ship has changed",
           "56(1)(b)  the ship no longer being eligible to be registered",
-          "56(1)(c)  on the ship being destroyed (which includes, but is not limited to, shipwreck, demolition, fire and sinking)",
           "56(1)(d)  taking into account any requirements of the Merchant Shipping Acts (including any instrument made under them) relating to the condition of the ship or its equipment so far as relevant to its safety or to any risk of pollution or to the safety, health and welfare persons employed or engaged in any capacity on board the ship, he considers that it would be inappropriate for the ship to remain registered",
           "56(1)(e)  when a registered fishing vessel which has been licensed to fish ceases to be so licensed for a continuous period of 6 months or more",
           "56(1)(f) when a fishing vessel which requires a licence to fish but at the time of registration did not have such a licence and has not acquired such a licence within 6 months of the issue of its certificate of registry",
