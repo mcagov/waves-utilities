@@ -1,6 +1,6 @@
 class WavesUtilities::DocumentType
   def initialize(code)
-    @code = code
+    @code = code.to_sym
   end
 
   def name
@@ -13,35 +13,29 @@ class WavesUtilities::DocumentType
 
   class << self
     def all(part = nil)
-      case (part || "").to_sym
-      when :part_2, :part_3, :part_4
-        complete_list.reject { |l| l[1] == "code_certificate" }
-      else
-        complete_list
-      end
-    end
-
-    private
-
-    def complete_list
       [
-        ["Bill of Sale", "bill_of_sale"],
-        ["Builders Certificate", "builders_certificate"],
-        ["Carving & Marking Note", "carving_and_marking"],
-        ["Code Certificate", "code_certificate"],
-        ["Certificate of Survey", "certificate_of_survey"],
-        ["Engine Manufacturers Data Sheet(s)", "engine_manufacturers_data_sheet"],
-        ["Engine Receipt", "engine_recipient"],
-        ["Fishing Vessel Safety Certificate", "fishing_vessel_safety_certificate"],
-        ["International Tonnage Certificate", "international_tonnage_certificate"],
-        ["MCEP Form", "mcep_form"],
-        ["Measurement Certificate", "measurement_certificate"],
-        ["Mortgage Deed", "mortgage_deed"],
-        ["Other Sale Document", "other_sale_document"],
-        ["Seafish Construction Certificate", "seafish_construction_certificate"],
-        ["Seafish Inspection Report", "seafish_inspection_report"],
-        ["Seafish email from Principal Surveyor", "seafish_email_from_principal_surveyor"],
-        ["Written Correspondence", "written_correspondence"],
+        ["Declaration of Eligibility", :declaration_of_elgibility],
+        ["Certificate of Incorporation", :certificate_of_incorporation],
+        ["Deletion Certificate or extract", :deletion_certificate],
+        ["Certificate of Survey for Tonnage & measurement", :certificate_of_survey],
+        ["ITC (if vessel is 24m or more)", :itc],
+        ["Coding documents", :coding_documents],
+        ["Continuous Synopsis Record", :continous_synopsis_record],
+        ["Seafish", :seafish],
+        ["Safety Certificate", :safety_certificate],
+        ["Engine Spec sheet", :engine_spec_sheet],
+        ["Charter Party Agreement", :charter_party_agreement],
+        ["Consent Letter", :consent_letter],
+        ["Outside UK Water letter (provisional only)", :ouside_uk_water_letter],
+        ["Certificate of Incorporation (if applicable)", :certificate_of_incorporation],
+        ["Current Certificate of Registry", :current_certificate_of_registry],
+        ["Bill of Sale", :bill_of_sale],
+        ["Invoice", :invoice],
+        ["Builder's Certificate", :builders_certificate],
+        ["Written correspondence from the owner(s)", :written_correspondence],
+        ["Death Certificate", :death_certificate],
+        ["Marriage Certificate", :marriage_certificate],
+        ["Other", :other]
       ]
     end
   end
