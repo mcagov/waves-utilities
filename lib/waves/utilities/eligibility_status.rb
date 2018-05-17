@@ -21,16 +21,5 @@ class WavesUtilities::EligibilityStatus
         ["(d) A local authority in the United Kingdom", :status_d],
       ]
     end
-
-    def part_3
-      [
-        ["(a) (i) British citizens, or (ii) Non-UK nationals exercising their freedom of movement of workers or right of establishment", :status_a],
-        ["(b) British Dependent Territories citizens", :status_b],
-        ["(c) British Overseas citizens", :status_c],
-        ["(d) Persons who under the British Nationality Act 1981 are British subjects", :status_d],
-        ["(e) Persons who under the Hong Kong (British Nationality) Order 1986 are British Nationals (Overseas)", :status_e],
-        ["(f) Commonwealth citizens not falling within those paragraphs", :status_f],
-      ]
-    end
   end
 end
