@@ -14,28 +14,27 @@ class WavesUtilities::DocumentType
   class << self
     def all(part = nil)
       [
-        ["Declaration of Eligibility", :declaration_of_elgibility],
-        ["Certificate of Incorporation", :certificate_of_incorporation],
-        ["Deletion Certificate or extract", :deletion_certificate],
-        ["Certificate of Survey for Tonnage & measurement", :certificate_of_survey],
-        ["ITC (if vessel is 24m or more)", :itc],
-        ["Coding documents", :coding_documents],
-        ["Continuous Synopsis Record", :continous_synopsis_record],
-        ["Seafish", :seafish],
-        ["Safety Certificate", :safety_certificate],
-        ["Engine Spec sheet", :engine_spec_sheet],
-        ["Charter Party Agreement", :charter_party_agreement],
-        ["Consent Letter", :consent_letter],
-        ["Outside UK Water letter (provisional only)", :ouside_uk_water_letter],
-        ["Certificate of Incorporation (if applicable)", :certificate_of_incorporation],
-        ["Current Certificate of Registry", :current_certificate_of_registry],
         ["Bill of Sale", :bill_of_sale],
-        ["Invoice", :invoice],
         ["Builder's Certificate", :builders_certificate],
-        ["Written correspondence from the owner(s)", :written_correspondence],
+        ["Certificate of Incorporation", :certificate_of_incorporation],
+        ["Certificate of Survey for Tonnage & measurement", :certificate_of_survey],
+        ["Charter Party Agreement", :charter_party_agreement],
+        ["Coding certificate", :certificate],
+        ["Consent Letter", :consent_letter],
+        ["Continuous Synopsis Record", :continous_synopsis_record],
+        ["Current Certificate of Registry", :current_certificate_of_registry],
         ["Death Certificate", :death_certificate],
+        ["Declaration of Eligibility", :declaration_of_elgibility],
+        ["Deletion Certificate or extract", :deletion_certificate],
+        ["Engine Spec sheet", :engine_spec_sheet],
+        ["Invoice", :invoice],
+        ["ITC (if vessel is 24m or more)", :itc],
         ["Marriage Certificate", :marriage_certificate],
-        ["Other", :other]
+        ["Other", :other],
+        ["Safety Certificate", :safety_certificate],
+        ["Seafish", :seafish],
+        ["Outside UK Water letter", :ouside_uk_water_letter],
+        ["Written correspondence from the owner(s)", :written_correspondence]
       ]
     end
   end
