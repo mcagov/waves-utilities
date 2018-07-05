@@ -145,6 +145,8 @@ module WavesUtilities
       [:issue_csr].include?(@key)
     end
 
+    private
+
     class << self
       def finance_task_types
         all_task_types.delete_if do |t|
