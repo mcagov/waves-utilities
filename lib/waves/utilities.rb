@@ -1,4 +1,5 @@
 require "countries"
+require "waves/utilities/application_type"
 require "waves/utilities/customer"
 require "waves/utilities/agent"
 require "waves/utilities/owner"
