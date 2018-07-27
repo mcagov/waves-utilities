@@ -4,7 +4,7 @@ module WavesUtilities
       def in_part(part)
        case part.to_sym
         when :part_1
-          [:commercial, :pleasure]
+          [:commercial, :high_profile, :pleasure]
         when :part_2
           [:simple, :full]
         when :part_4
