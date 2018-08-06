@@ -14,6 +14,12 @@ module WavesUtilities
       Task.all_task_types.find { |t| t[1] == @key }[0]
     end
 
+    def registered_vessel_required?
+      ![
+        :new_registration, :provisional, :transfer_in, :unknown
+      ].include?(@key)
+    end
+
     class << self
       def fee_entry
         all.delete_if do |t|
