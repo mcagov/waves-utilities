@@ -32,7 +32,7 @@ module WavesUtilities
         all.delete_if do |t|
           [
             :registrar_closure, :termination_notice, :section_notice,
-            :forced_closure, :registrar_restores_closure, :unknown
+            :forced_closure, :restore_closed_registration, :unknown
           ].include?(t[1])
         end
       end
@@ -64,7 +64,7 @@ module WavesUtilities
           ["Registration Closure: Close Without Notice", :forced_closure],
           ["Registration Closure: 7 Day Notice of Termination", :termination_notice],
           ["Registration Closure: 30 Day Section Notice", :section_notice],
-          ["Registrar Restores Closure", :registrar_restores_closure],
+          ["Restore Closed Registration", :restore_closed_registration],
           ["Mortgage(s): Registration", :mortgage],
           ["Mortgage(s): Other", :mortgage_other],
           ["Issue CSR", :issue_csr],
