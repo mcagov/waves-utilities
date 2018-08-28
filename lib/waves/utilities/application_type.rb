@@ -1,18 +1,15 @@
 module WavesUtilities
   class ApplicationType
-    attr_reader :key
+    attr_reader :key, :description
 
     def initialize(key)
       @key = key.to_sym
-      @application_type = Task.all_task_types.find { |t| t[1] == @key }
+      application_type = ApplicationType.all.find { |t| t[1] == @key }
+      @description = application_type[0] if application_type
     end
 
     def ==(other)
       @key == other.to_sym
-    end
-
-    def description
-      @application_type[0] if @application_type
     end
 
     def registered_vessel_required?
