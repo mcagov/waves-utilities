@@ -4,6 +4,7 @@ module WavesUtilities
 
     def initialize(key)
       @key = key.to_sym
+      @application_type = Task.all_task_types.find { |t| t[1] == @key }
     end
 
     def ==(other)
@@ -11,7 +12,7 @@ module WavesUtilities
     end
 
     def description
-      Task.all_task_types.find { |t| t[1] == @key }[0]
+      @application_type[0] if @application_type
     end
 
     def registered_vessel_required?

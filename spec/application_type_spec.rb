@@ -21,6 +21,11 @@ describe WavesUtilities::ApplicationType do
         let(:key) { :change_vessel }
         it { expect(subject).to eq("Change of Vessel details") }
       end
+
+      context "for foo" do
+        let(:key) { :foo }
+        it { expect(subject).to be_nil }
+      end
     end
   end
 
