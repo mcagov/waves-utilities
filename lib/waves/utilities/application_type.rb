@@ -3,7 +3,7 @@ module WavesUtilities
     attr_reader :key, :description
 
     def initialize(key)
-      @key = key.to_sym
+      @key = key.to_sym if key
       application_type = ApplicationType.all.find { |t| t[1] == @key }
       @description = application_type[0] if application_type
     end

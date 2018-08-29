@@ -26,6 +26,11 @@ describe WavesUtilities::ApplicationType do
         let(:key) { :foo }
         it { expect(subject).to be_nil }
       end
+
+      context "for nil" do
+        let(:key) { nil }
+        it { expect(subject).to be_nil }
+      end
     end
   end
 
