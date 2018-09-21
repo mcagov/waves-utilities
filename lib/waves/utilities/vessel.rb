@@ -93,6 +93,7 @@ module WavesUtilities
       :alt_name_3,
       :vessel_type,
       :vessel_type_other,
+      :autonomous_vessel,
 
       # added to support part_2 #Identity section
       :registration_type,
