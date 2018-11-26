@@ -16,6 +16,7 @@ class WavesUtilities::DocumentType
       [
         ["Bill of Sale", :bill_of_sale],
         ["Builder's Certificate", :builders_certificate],
+        ["Carving & Marking Note", :carving_and_marking_note],
         ["Certificate of Incorporation", :certificate_of_incorporation],
         ["Certificate of Survey for Tonnage & measurement", :certificate_of_survey],
         ["Charter Party Agreement", :charter_party_agreement],
