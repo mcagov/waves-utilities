@@ -55,6 +55,7 @@ class WavesUtilities::Port
         ["E", "EXETER "],
         ["FH", "FALMOUTH"],
         ["F", "FAVERSHAM"],
+        ["FXT", "FELIXSTOWE"],
         ["FIS", "FISHGUARD"],
         ["FD", "FLEETWOOD "],
         ["FE", "FOLKESTONE "],
@@ -69,6 +70,7 @@ class WavesUtilities::Port
         ["GK", "GREENOCK "],
         ["GY", "GRIMSBY "],
         ["HL", "HARTLEPOOL "],
+        ["HLWEST", "HARTLEPOOL  WEST"],
         ["HH", "HARWICH "],
         ["H", "HULL "],
         ["INS", "INVERNESS "],
