@@ -5,12 +5,12 @@ class WavesUtilities::Port
 
   def name
     port = WavesUtilities::Port.all.find { |port| port[1] == @code }
-    port ? port[0].gsub("\u2028", "") : ""
+    port ? port[0] : ""
   end
 
   class << self
     def all
-      part_2.map{ |port| [port[1], port[0]]}
+      part_2.map{ |port| [port[1].gsub("\u2028", ""), port[0].gsub("\u2028", "")]}
     end
 
     def part_2
