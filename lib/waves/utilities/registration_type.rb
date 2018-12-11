@@ -6,9 +6,9 @@ module WavesUtilities
         when :part_1
           [:commercial, :high_profile, :pleasure]
         when :part_2
-          [:simple, :full]
+          [:full, :simple]
         when :part_4
-          [:fishing, :commercial, :pleasure]
+          [:commercial, :fishing, :pleasure]
         end
       end
     end
