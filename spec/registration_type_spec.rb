@@ -11,7 +11,7 @@ RSpec.describe WavesUtilities::RegistrationType do
 
     context "part_2" do
       let(:part) { :part_2 }
-      it { expect(subject.first).to eq(:full) }
+      it { expect(subject.first).to eq(:simple) }
     end
 
     context "part_4" do
