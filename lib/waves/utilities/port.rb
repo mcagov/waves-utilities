@@ -94,7 +94,7 @@ class WavesUtilities::Port
         ["ML", "METHIL "],
         ["MH", "MIDDLESBROUGH"],
         ["M", "MILFORD HAVEN"],
-        ["NT", "NEWPORT, GWENT"],
+        ["NT", "NEWPORT"],
         ["N", "NEWRY "],
         ["OB", "OBAN "],
         ["ME", "MONTROSE "],
